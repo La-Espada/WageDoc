@@ -26,4 +26,6 @@ model WageDocUser{
   socialInsuranceNumber String
   phoneNumber String
   role Role
+  createdAt DateTime?
+  updatedAt DateTime?
 }

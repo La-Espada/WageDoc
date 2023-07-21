@@ -18,6 +18,7 @@ type WageDocUser = {
 }
 
 async function seed(){
+
     await Promise.all(
         getAdminWageDocUser().map((adminUser) =>{
             return db.wageDocUser.create({
@@ -29,7 +30,8 @@ async function seed(){
                     birthDate:adminUser.birthDate,
                     phoneNumber:adminUser.phoneNumber,
                     socialInsuranceNumber:adminUser.socialInsuranceNumber,
-                    role:"ADMIN"
+                    role:"ADMIN",
+                    createdAt: new Date()
                 }
         }
     )
